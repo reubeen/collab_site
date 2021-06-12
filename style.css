@@ -122,4 +122,59 @@ ul {
   position:absolute;
   font-size: 40px;
 }
-  
+.footer{
+position: relative;
+width: 100%;
+background-color: grey;
+color: wheat;
+font-size: 20px;;
+text-align: center;
+}
+/*form*/
+.contact-box{
+  width:600px;
+  padding: 0px 20px;
+  box-shadow: 0 0 20px 0 #999;
+  top: 40%;
+  left: 28%;
+  position: relative;
+}
+input[type=text] {
+  width: 450px;
+  padding: 20px 30px;
+  margin: 20px 44px;
+  box-sizing: border-box;
+  border-radius:10px;
+  border-color:skyblue;
+}
+input[type=text1] {
+  width: 450px;
+  padding: 20px 30px;
+  margin: 20px 18px;
+  box-sizing: border-box;
+  border-radius:10px;
+  border-color:skyblue;
+}
+input[type=submit]{
+    background-color: skyblue;
+    border: none;
+    color: white;
+    padding: 16px 33px;
+    text-decoration: none;
+    margin: 20px 90px;
+    cursor: pointer;
+    border-radius: 9px;
+
+
+}
+select {
+  width: 400px;
+  padding: 12px 10px;
+  border: none;
+  border-radius: 9px;
+  background-color: #f1f1f1;
+  margin: 20px 29px;
+}
+input[type=submit]:hover {
+  background-color:pink;
+}
