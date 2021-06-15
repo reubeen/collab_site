@@ -5,13 +5,17 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
     <link rel="stylesheet" href="style.css">
     <title>Collab</title>
 </head>
 
 <body>
-    <div class="nav">
+    <div class="spinner" style="display: grid;">
+        <img src="200.gif" alt="">
+    </div>
+   <div class="body_container" style="display: none;">
+    <div class="nav" >
         <ul>
 
             <li><a href="#">Home</a></li>
@@ -23,62 +27,84 @@
     <div class="container">
         <img src="wallpaperflare.com_wallpaper (1).jpg" alt="mountain" class="main_image">
         <div class="overlay">
- <div class="text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsam facere excepturi quis
-                   aperiam atque aliquam expedita recusandae sit rerum, architecto, quisquam soluta asperi
-                   voluptate, in libero dignissimos repellendus ipsa.</div>
+            <div class="text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsam facere excepturi quis
+                aperiam atque aliquam expedita recusandae sit rerum, architecto, quisquam soluta asperi
+                voluptate, in libero dignissimos repellendus ipsa.</div>
         </div>
     </div>
 
     <!-- !!image gallery -->
     <h1>Gallery</h1>
-<div class="image_show">
-    <div class="image">
-        <img src="https://a0.muscache.com/im/pictures/2f13349d-879d-43c6-83e3-8e5679291d53.jpg?im_w=480" alt="image" />
+    <div class="image_show" data-aos-once="true" data-aos="fade-up" data-aos-delay="300" >
+        <div class="image" >
+            <img src="https://a0.muscache.com/im/pictures/2f13349d-879d-43c6-83e3-8e5679291d53.jpg?im_w=480"
+                alt="image" />
+        </div>
+        <div class="image">
+            <img src="https://a0.muscache.com/im/pictures/36f53e61-db8d-403c-9122-5b761c0e4264.jpg?im_w=480"
+                alt="image" />
+        </div>
+        <div class="image">
+            <img src="https://a0.muscache.com/im/pictures/7d82ca14-56e5-4465-8218-dcfa7d69b6ac.jpg?im_w=480"
+                alt="image" />
+        </div>
+        <div class="image">
+            <img src="https://a0.muscache.com/im/pictures/10a638e1-6aff-4313-8033-1275cec83987.jpg?im_w=480"
+                alt="image" />
+        </div>
     </div>
-    <div class="image">
-        <img src="https://a0.muscache.com/im/pictures/36f53e61-db8d-403c-9122-5b761c0e4264.jpg?im_w=480" alt="image" />
-    </div>
-    <div class="image">
-        <img src="https://a0.muscache.com/im/pictures/7d82ca14-56e5-4465-8218-dcfa7d69b6ac.jpg?im_w=480"
-            alt="image" />
-    </div>
-    <div class="image">
-        <img src="https://a0.muscache.com/im/pictures/10a638e1-6aff-4313-8033-1275cec83987.jpg?im_w=480" alt="image" />
-    </div>
-</div>
-<div class="image_ill">
-    <img src="https://a0.muscache.com/im/pictures/2da67c1c-0c61-4629-8798-1d4de1ac9291.jpg?im_w=1440" alt="image"/>
-     
-    <p class="r">Enjoy the Nature</p>
-</div>
-<!--contact form-->
-<center><h2>CONTACT FORM</h2></center>
-<div class="contact-box">
-        <label>Name</label>
- <input type="text" id="fname" placeholder="Your Name">
- <br>
-<label>Lastname</label>
-<input type="text1" id="lname" placeholder="Your last Name">
-<br>
-<label for="country">Country</label>
+    <div class="image_ill" data-aos="flip-left"
+    data-aos-easing="ease-out-cubic"
+    data-aos-duration="2000">
+        <img src="https://a0.muscache.com/im/pictures/2da67c1c-0c61-4629-8798-1d4de1ac9291.jpg?im_w=1440" alt="image" />
 
-<select id="country" name="country">
-    <option value="Nepal">Nepal</option>
-    <option value="Australia">Australia</option>
-    <option value="usa">USA</option>
-  </select>
-  <br>
-  <input type="submit" value="submit">
-  </div>
-  <!-- footer-->
-  <div class="footer">
-      <p>
-           (c)work in progress in the footer
-      </p>
-  </div>
+        <p class="r">Enjoy the Nature</p>
+    </div>
+    <!--contact form-->
+    <div class="contact_form" >
+        <h2 class="contact_header">CONTACT FORM</h2>
+        <div class="contact-box">
+            <label>Name</label>
+            <input class="contact_input" type="text" id="fname" placeholder="Your Name">
+            <br>
+            <label>Lastname</label>
+            <input class="contact_input" type="text1" id="lname" placeholder="Your last Name">
+            <br>
+            <label for="country">Country</label>
+            <select id="country" name="country">
+                <option value="Nepal">Nepal</option>
+                <option value="Australia">Australia</option>
+                <option value="usa">USA</option>
+            </select>
+            <input type="submit" value="submit">
 
-       
+        </div>
 
+
+        <br>
+    </div>
+    <!-- footer-->
+    <div class="footer">
+        <p>
+            (c)work in progress in the footer
+        </p>
+    </div>
+
+   </div>
+
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script>
+      AOS.init();
+    </script>
+
+    <script>
+        const spinner= document.querySelector('.spinner')
+        const body_container= document.querySelector('.body_container')
+        window.addEventListener('load', ()=>{
+           spinner.style.display= "none"
+           body_container.style.display= "block"
+        })
+    </script>
 </body>
 
 </html>
